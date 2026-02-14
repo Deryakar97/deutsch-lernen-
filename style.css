@@ -5,7 +5,7 @@
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
-/* Arka plan – deniz içi hissi */
+/* Arka plan – su altı derinliği */
 body {
   background: linear-gradient(to bottom, #a0f0ff 0%, #22c1ee 50%, #0d3a5e 100%);
   background-attachment: fixed;
@@ -63,12 +63,7 @@ body::before {
   height: 12px;
   border-radius: 3px;
   margin-top: 6px;
-  background: linear-gradient(
-    to bottom,
-    black 33%,
-    red 33% 66%,
-    gold 66%
-  );
+  background: linear-gradient(to bottom, black 33%, red 33% 66%, gold 66%);
   opacity: 0.8;
 }
 
@@ -90,19 +85,11 @@ body::before {
   transition: 0.25s;
   backdrop-filter: blur(10px);
   color: #020617;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
 }
 
 .card:hover { transform: translateY(-3px); }
-
-.card-title {
-  font-size: 12px;
-  color: #0284c7;
-  margin-bottom: 12px;
-  letter-spacing: 0.6px;
-  text-transform: uppercase;
-}
-
+.card-title { font-size: 12px; color: #0284c7; margin-bottom: 12px; letter-spacing: 0.6px; text-transform: uppercase; }
 .goal { font-size: 20px; font-weight: 500; }
 .last-item { font-size: 16px; }
 
@@ -119,73 +106,46 @@ button {
   transition: 0.2s;
   font-size: 14px;
   font-weight: 500;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.18);
 }
 button:hover { transform: scale(1.04); }
 
 /* Kabarcıklar */
-.bubbles {
-  position: fixed;
-  inset: 0;
-  overflow: hidden;
-  pointer-events: none;
-  z-index: 1;
-}
+.bubbles { position: fixed; inset: 0; overflow: hidden; pointer-events: none; z-index: 1; }
 .bubbles span {
-  position: absolute;
-  bottom: -80px;
-  border-radius: 50%;
-  animation: rise infinite ease-in;
+  position: absolute; bottom: -80px; border-radius: 50%; animation: rise infinite ease-in;
   background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.95), rgba(255,255,255,0.45) 25%, rgba(255,255,255,0.12) 60%, rgba(255,255,255,0.05));
   backdrop-filter: blur(4px);
   box-shadow: inset -10px -10px 20px rgba(255,255,255,0.35), inset 8px 8px 16px rgba(255,255,255,0.18), 0 14px 32px rgba(0,0,0,0.2);
 }
-.bubbles span:nth-child(1) { left: 8%;  width: 20px; height: 20px; animation-duration: 12s; }
-.bubbles span:nth-child(2) { left: 18%; width: 32px; height: 32px; animation-duration: 16s; }
-.bubbles span:nth-child(3) { left: 33%; width: 18px; height: 18px; animation-duration: 14s; }
-.bubbles span:nth-child(4) { left: 48%; width: 40px; height: 40px; animation-duration: 18s; }
-.bubbles span:nth-child(5) { left: 63%; width: 26px; height: 26px; animation-duration: 15s; }
-.bubbles span:nth-child(6) { left: 76%; width: 20px; height: 20px; animation-duration: 13s; }
-.bubbles span:nth-child(7) { left: 88%; width: 48px; height: 48px; animation-duration: 20s; }
+.bubbles span:nth-child(1){left:8%;width:20px;height:20px;animation-duration:12s;}
+.bubbles span:nth-child(2){left:18%;width:32px;height:32px;animation-duration:16s;}
+.bubbles span:nth-child(3){left:33%;width:18px;height:18px;animation-duration:14s;}
+.bubbles span:nth-child(4){left:48%;width:40px;height:40px;animation-duration:18s;}
+.bubbles span:nth-child(5){left:63%;width:26px;height:26px;animation-duration:15s;}
+.bubbles span:nth-child(6){left:76%;width:20px;height:20px;animation-duration:13s;}
+.bubbles span:nth-child(7){left:88%;width:48px;height:48px;animation-duration:20s;}
+@keyframes rise {from{transform:translateY(0) scale(0.9);opacity:0;}10%{opacity:1;}to{transform:translateY(-120vh) scale(1.2);opacity:0;}}
 
-@keyframes rise {
-  from { transform: translateY(0) scale(0.9); opacity: 0; }
-  10% { opacity: 1; }
-  to { transform: translateY(-120vh) scale(1.2); opacity: 0; }
-}
+/* Balıklar */
+.fishes { position: fixed; inset: 0; pointer-events: none; z-index: 5; }
+.fish { position: absolute; bottom:-30px; width:18px; height:9px; border-radius:50% 50% 50% 50%; opacity:0.9; animation: swim linear infinite; }
+.fish.orange{background:orange;}
+.fish.pink{background:hotpink;}
+.fish.blue{background:#1e3a8a;}
+.fish.green{background:#22c55e;}
+.fish.yellow{background:#facc15;}
 
-/* Renkli balıklar */
-.fishes {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 1;
-}
-.fish {
-  position: absolute;
-  bottom: -20px;
-  width: 16px;
-  height: 8px;
-  border-radius: 50% 50% 50% 50%;
-  opacity: 0.8;
-  animation: swim linear infinite;
-}
-.fish.orange { background: orange; }
-.fish.pink   { background: hotpink; }
-.fish.blue   { background: #1e3a8a; }
-.fish.green  { background: #22c55e; }
-.fish.yellow { background: #facc15; }
-
-.fish:nth-child(1) { left: 5%; animation-duration: 12s; animation-delay: 0s; }
-.fish:nth-child(2) { left: 20%; animation-duration: 15s; animation-delay: 2s; }
-.fish:nth-child(3) { left: 35%; animation-duration: 18s; animation-delay: 1s; }
-.fish:nth-child(4) { left: 55%; animation-duration: 14s; animation-delay: 0.5s; }
-.fish:nth-child(5) { left: 75%; animation-duration: 20s; animation-delay: 1.5s; }
+.fish:nth-child(1){left:5%;animation-duration:12s;animation-delay:0s;}
+.fish:nth-child(2){left:20%;animation-duration:15s;animation-delay:2s;}
+.fish:nth-child(3){left:35%;animation-duration:18s;animation-delay:1s;}
+.fish:nth-child(4){left:55%;animation-duration:14s;animation-delay:0.5s;}
+.fish:nth-child(5){left:75%;animation-duration:20s;animation-delay:1.5s;}
 
 @keyframes swim {
-  0% { transform: translateX(0) translateY(0) rotate(0deg); opacity: 0; }
-  10% { opacity: 1; }
-  50% { transform: translateX(60vw) translateY(-20vh) rotate(10deg); }
-  80% { transform: translateX(100vw) translateY(-50vh) rotate(-10deg); }
-  100% { transform: translateX(120vw) translateY(-60vh) rotate(15deg); opacity: 0; }
+  0% { transform:translateX(0) translateY(0) rotate(0deg); opacity:0; }
+  10%{opacity:1;}
+  50%{ transform:translateX(60vw) translateY(-20vh) rotate(10deg);}
+  80%{ transform:translateX(100vw) translateY(-50vh) rotate(-10deg);}
+  100%{ transform:translateX(120vw) translateY(-60vh) rotate(15deg); opacity:0;}
 }
