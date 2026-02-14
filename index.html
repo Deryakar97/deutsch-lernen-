@@ -1,75 +1,127 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Derya’s Deutsch</title>
-  <link rel="stylesheet" href="style.css?v=2026">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Derya's Deutsch</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Marka -->
-  <div class="brand">
-    <div class="title">Derya’s Deutsch <span class="flag"></span></div>
-    <div class="subtitle">Dil öğrenmek, dalış gibidir</div>
+<!-- Arka plan kabarcıkları -->
+<div class="bubbles"></div>
+
+<!-- Başlık ve bayrak -->
+<header>
+  <h1>Derya's Deutsch <img src="germany-flag.png" alt="Alman Bayrağı" class="flag"></h1>
+</header>
+
+<!-- Hamburger Menü -->
+<div class="hamburger" onclick="toggleMenu()">☰</div>
+<nav id="sideMenu" class="side-menu">
+  <ul>
+    <li><a href="#home" onclick="closeMenu()">Ana Sayfa</a>
+      <ul>
+        <li><a href="#about" onclick="closeMenu()">Hakkımda</a></li>
+      </ul>
+    </li>
+    <li><a href="#a1" onclick="closeMenu()">A1 Almanca</a>
+      <ul>
+        <li><a href="#kelimeler" onclick="closeMenu()">Kelimeler</a></li>
+        <li><a href="#konular" onclick="closeMenu()">Konular</a></li>
+        <li><a href="#cumleler" onclick="closeMenu()">Cümleler</a></li>
+        <li><a href="#tekrar" onclick="closeMenu()">Tekrar</a></li>
+        <li><a href="#oyun" onclick="closeMenu()">Oyun</a></li>
+      </ul>
+    </li>
+    <li><a href="#kaynaklar" onclick="closeMenu()">Kaynaklar</a></li>
+  </ul>
+</nav>
+
+<!-- Ana Sayfa -->
+<section id="home">
+  <div class="card">
+    <div class="card-title">Günün Motivasyonu</div>
+    <div id="dailyMotivation" class="goal">Bugün Almanca öğren!</div>
+  </div>
+  <div class="buttons">
+    <button onclick="scrollToSection('a1')">Çalışmaya Devam Et</button>
+    <button onclick="scrollToSection('tekrar')">Tekrar Yap</button>
   </div>
 
-  <!-- Hamburger Menüsü -->
-  <div class="hamburger" onclick="toggleMenu()">☰</div>
-  <nav class="side-menu" id="sideMenu">
-    <ul>
-      <li><a href="index.html">Ana Sayfa</a></li>
-      <li>
-        <a href="#">A1 Almanca ▾</a>
-        <ul class="submenu">
-          <li><a href="a1-kelimeler.html">Kelimeler</a></li>
-          <li><a href="a1-konular.html">Konular</a></li>
-          <li><a href="a1-tekrar.html">Tekrar</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#">A2 Almanca ▾</a>
-        <ul class="submenu">
-          <li><a href="a2-kelimeler.html">Kelimeler</a></li>
-          <li><a href="a2-konular.html">Konular</a></li>
-          <li><a href="a2-tekrar.html">Tekrar</a></li>
-        </ul>
-      </li>
-      <li><a href="hakkimda.html">Hakkımda</a></li>
-    </ul>
-  </nav>
+  <!-- Hakkımda Bölümü -->
+  <section id="about" class="about-section">
+    <h2>Hakkımda</h2>
+    <p>
+      Merhaba, ben Derya!<br>
+      Almanca öğrenmeye tutkuyla devam ediyorum ve öğrendiklerimi paylaşmayı seviyorum.<br>
+      Bu siteyi, hem kendi motivasyonumu artırmak hem de Almanca öğrenmek isteyenlerle bilgi ve kaynakları paylaşmak için hazırladım.<br><br>
+      “Dil öğrenmek, dalış gibidir” – her gün küçük adımlarla ilerlemek büyük fark yaratır.<br><br>
+      Burada kelimeler, cümleler, oyunlar ve günlük motivasyon cümleleriyle Almanca öğrenmeyi eğlenceli hale getirmeye çalışıyorum.
+    </p>
+  </section>
+</section>
 
-  <!-- Kabarcıklar -->
-  <div class="bubbles">
-    <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+<!-- A1 Sayfası -->
+<section id="a1">
+  <h2>A1 Almanca</h2>
+  <div id="kelimeler">
+    <h3>Kelimeler</h3>
+    <div class="word-card der" onclick="speak('der Tisch')">der Tisch – Masa</div>
+    <div class="word-card die" onclick="speak('die Tür')">die Tür – Kapı</div>
+    <div class="word-card das" onclick="speak('das Haus')">das Haus – Ev</div>
+    <div class="word-card other" onclick="speak('der Apfel')">der Apfel – Elma</div>
   </div>
+  <div id="konular"><h3>Konular</h3><p>Basit gramer ve cümle yapıları burada olacak.</p></div>
+  <div id="cumleler"><h3>Cümleler</h3><p>Günlük diyalog örnekleri, tıklayınca sesli okunur.</p></div>
+  <div id="tekrar"><h3>Tekrar</h3><p>Günlük veya haftalık quiz bölümü.</p></div>
+  <div id="oyun"><h3>Oyun</h3><p>Hafıza kartı veya eşleştirme oyunları burada olacak.</p></div>
+</section>
 
-  <!-- İçerik -->
-  <main class="content">
-    <section class="card">
-      <div class="card-title">Bugünkü Hedef</div>
-      <div class="goal">10 kelime · 1 konu · 1 tekrar</div>
-    </section>
-
-    <section class="card">
-      <div class="card-title">Devam Et</div>
-      <div class="actions">
-        <button onclick="location.href='a1.html'">Çalışmaya Devam Et</button>
-        <button onclick="location.href='a1.html'">Tekrar Yap</button>
-      </div>
-    </section>
-
-    <section class="card">
-      <div class="card-title">Son Çalışılan Konu</div>
-      <div class="last-item">Akkusativ · Zamirler</div>
-    </section>
-  </main>
+<!-- Kaynaklar -->
+<section id="kaynaklar">
+  <h2>Kaynaklar</h2>
+  <div class="source-card"><a href="https://www.youtube.com/@begibegi" target="_blank">YouTube – Begibegi</a></div>
+  <div class="source-card"><a href="https://www.duolingo.com/course/de/tr/Learn-German" target="_blank">Duolingo</a></div>
+  <div class="source-card"><a href="https://www.dw.com/tr/deutsch-lernen/s-2469" target="_blank">DW Deutsch Lernen</a></div>
+  <div class="source-card"><a href="https://www.goethe.de/ins/tr/tr/spr/kur.html" target="_blank">Goethe-Institut</a></div>
+  <div class="source-card"><a href="https://www.hellotalk.com/" target="_blank">HelloTalk</a></div>
+</section>
 
 <script>
+// Hamburger Menü
 function toggleMenu() {
   document.getElementById('sideMenu').classList.toggle('open');
+}
+function closeMenu() {
+  document.getElementById('sideMenu').classList.remove('open');
+}
+
+// Günlük motivasyon
+const motivations = [
+  "Heute lernen wir neue Wörter! – Bugün yeni kelimeler öğreniyoruz!",
+  "Kleine Schritte führen zum Erfolg. – Küçük adımlar başarıya götürür.",
+  "Jeden Tag ein bisschen Deutsch. – Her gün biraz Almanca.",
+  "Übung macht den Meister. – Alıştırma ustalık kazandırır.",
+  "Sprich mutig! – Cesurca konuş!",
+  "Neue Wörter, neue Möglichkeiten! – Yeni kelimeler, yeni fırsatlar!"
+];
+const today = new Date();
+const index = today.getDate() % motivations.length;
+document.getElementById("dailyMotivation").innerText = motivations[index];
+
+// Smooth scroll fonksiyonu
+function scrollToSection(id) {
+  document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+}
+
+// Kelime sesli okuma
+function speak(text){
+  const utter = new SpeechSynthesisUtterance(text);
+  utter.lang = 'de-DE';
+  speechSynthesis.speak(utter);
 }
 </script>
 
 </body>
-      </html>
+</html>
