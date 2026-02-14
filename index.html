@@ -14,15 +14,34 @@
     <div class="subtitle">Dil öğrenmek, dalış gibidir</div>
   </div>
 
+  <!-- Hamburger Menüsü -->
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+  <nav class="side-menu" id="sideMenu">
+    <ul>
+      <li><a href="index.html">Ana Sayfa</a></li>
+      <li>
+        <a href="#">A1 Almanca ▾</a>
+        <ul class="submenu">
+          <li><a href="a1-kelimeler.html">Kelimeler</a></li>
+          <li><a href="a1-konular.html">Konular</a></li>
+          <li><a href="a1-tekrar.html">Tekrar</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">A2 Almanca ▾</a>
+        <ul class="submenu">
+          <li><a href="a2-kelimeler.html">Kelimeler</a></li>
+          <li><a href="a2-konular.html">Konular</a></li>
+          <li><a href="a2-tekrar.html">Tekrar</a></li>
+        </ul>
+      </li>
+      <li><a href="hakkimda.html">Hakkımda</a></li>
+    </ul>
+  </nav>
+
   <!-- Kabarcıklar -->
   <div class="bubbles">
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
   </div>
 
   <!-- İçerik -->
@@ -35,8 +54,8 @@
     <section class="card">
       <div class="card-title">Devam Et</div>
       <div class="actions">
-        <button>Çalışmaya Devam Et</button>
-        <button>Tekrar Yap</button>
+        <button onclick="location.href='a1.html'">Çalışmaya Devam Et</button>
+        <button onclick="location.href='a1.html'">Tekrar Yap</button>
       </div>
     </section>
 
@@ -46,5 +65,11 @@
     </section>
   </main>
 
+<script>
+function toggleMenu() {
+  document.getElementById('sideMenu').classList.toggle('open');
+}
+</script>
+
 </body>
-  </html>
+      </html>
