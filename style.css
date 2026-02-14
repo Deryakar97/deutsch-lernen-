@@ -6,7 +6,6 @@
 }
 
 /* Arka plan – canlı aqua */
-
 body {
   background: linear-gradient(135deg, #67e8f9, #22d3ee, #0ea5e9);
   background-attachment: fixed;
@@ -16,7 +15,6 @@ body {
 }
 
 /* Marka */
-
 .brand {
   position: fixed;
   top: 20px;
@@ -39,7 +37,6 @@ body {
 }
 
 /* Alman bayrağı */
-
 .flag {
   display: block;
   width: 18px;
@@ -56,7 +53,6 @@ body {
 }
 
 /* İçerik */
-
 .content {
   padding: 120px 40px;
   max-width: 520px;
@@ -65,7 +61,6 @@ body {
 }
 
 /* Kartlar – glass / modern */
-
 .card {
   background: rgba(255, 255, 255, 0.85);
   border: 1px solid rgba(255, 255, 255, 0.9);
@@ -100,7 +95,6 @@ body {
 }
 
 /* Butonlar */
-
 .actions {
   display: flex;
   gap: 12px;
@@ -125,7 +119,6 @@ button:hover {
 }
 
 /* Kabarcık container */
-
 .bubbles {
   position: fixed;
   inset: 0;
@@ -134,8 +127,7 @@ button:hover {
   z-index: 1;
 }
 
-/* 3D cam kabarcıklar */
-
+/* 3D cam kabarcıklar – daha büyük */
 .bubbles span {
   position: absolute;
   bottom: -80px;
@@ -144,32 +136,30 @@ button:hover {
 
   background: radial-gradient(
     circle at 30% 30%,
-    rgba(255, 255, 255, 0.95),
-    rgba(255, 255, 255, 0.45) 25%,
-    rgba(255, 255, 255, 0.12) 60%,
-    rgba(255, 255, 255, 0.05)
+    rgba(255,255,255,0.95),
+    rgba(255,255,255,0.45) 25%,
+    rgba(255,255,255,0.12) 60%,
+    rgba(255,255,255,0.05)
   );
 
   backdrop-filter: blur(4px);
 
   box-shadow:
-    inset -8px -8px 18px rgba(255, 255, 255, 0.35),
-    inset 6px 6px 12px rgba(255, 255, 255, 0.18),
-    0 12px 28px rgba(0, 0, 0, 0.18);
+    inset -10px -10px 20px rgba(255,255,255,0.35),
+    inset 8px 8px 16px rgba(255,255,255,0.18),
+    0 14px 32px rgba(0,0,0,0.2);
 }
 
-/* Boyut + hız varyasyonları */
-
-.bubbles span:nth-child(1) { left: 8%;  width: 14px; height: 14px; animation-duration: 10s; }
-.bubbles span:nth-child(2) { left: 18%; width: 22px; height: 22px; animation-duration: 16s; }
-.bubbles span:nth-child(3) { left: 33%; width: 10px; height: 10px; animation-duration: 12s; }
-.bubbles span:nth-child(4) { left: 48%; width: 30px; height: 30px; animation-duration: 18s; }
-.bubbles span:nth-child(5) { left: 63%; width: 18px; height: 18px; animation-duration: 14s; }
-.bubbles span:nth-child(6) { left: 76%; width: 12px; height: 12px; animation-duration: 11s; }
-.bubbles span:nth-child(7) { left: 88%; width: 26px; height: 26px; animation-duration: 17s; }
+/* Boyut + hız varyasyonları – büyütüldü */
+.bubbles span:nth-child(1) { left: 8%;  width: 20px; height: 20px; animation-duration: 12s; }
+.bubbles span:nth-child(2) { left: 18%; width: 32px; height: 32px; animation-duration: 16s; }
+.bubbles span:nth-child(3) { left: 33%; width: 18px; height: 18px; animation-duration: 14s; }
+.bubbles span:nth-child(4) { left: 48%; width: 40px; height: 40px; animation-duration: 18s; }
+.bubbles span:nth-child(5) { left: 63%; width: 26px; height: 26px; animation-duration: 15s; }
+.bubbles span:nth-child(6) { left: 76%; width: 20px; height: 20px; animation-duration: 13s; }
+.bubbles span:nth-child(7) { left: 88%; width: 48px; height: 48px; animation-duration: 20s; }
 
 /* Animasyon */
-
 @keyframes rise {
   from {
     transform: translateY(0) scale(0.9);
@@ -179,7 +169,7 @@ button:hover {
     opacity: 1;
   }
   to {
-    transform: translateY(-120vh) scale(1.15);
+    transform: translateY(-120vh) scale(1.2);
     opacity: 0;
   }
     }
