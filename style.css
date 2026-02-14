@@ -1,6 +1,6 @@
 body {
   margin:0;
-  font-family: 'Arial', sans-serif;
+  font-family: Arial, sans-serif;
   background: #7fdbff;
   color: #fff;
   overflow-x: hidden;
@@ -15,19 +15,6 @@ body {
   left:0;
   z-index: -1;
   background: radial-gradient(circle at bottom, #7fdbff 0%, #00bfff 100%);
-  overflow:hidden;
-}
-.bubbles::after {
-  content:'';
-  position:absolute;
-  width:10px; height:10px;
-  background: rgba(255,255,255,0.5);
-  border-radius:50%;
-  animation: rise 15s linear infinite;
-}
-@keyframes rise {
-  0% {transform: translateY(100vh) scale(0.5);}
-  100% {transform: translateY(-10vh) scale(1);}
 }
 
 /* Başlık */
@@ -66,8 +53,6 @@ header .flag {
 .side-menu.open { right:0; }
 .side-menu ul { list-style:none; padding:0; }
 .side-menu ul li { padding:10px 20px; }
-.side-menu ul li ul { padding-left:15px; display:none; }
-.side-menu ul li:hover ul { display:block; }
 .side-menu a { color:#fff; text-decoration:none; }
 
 /* Kartlar */
@@ -82,46 +67,26 @@ header .flag {
 }
 .card-title { font-size:1.5em; margin-bottom:10px; }
 
-/* Butonlar */
-.buttons { text-align:center; margin:20px 0; }
-.buttons button {
-  padding:10px 20px;
-  margin:0 10px;
-  border:none;
-  border-radius:12px;
-  cursor:pointer;
-  font-weight:500;
-  background:#0ea5e9;
-  color:#fff;
-  transition:0.2s;
-}
-.buttons button:hover { transform: scale(1.05); }
-
 /* Hakkımda */
 .about-section {
   background: rgba(255,255,255,0.1);
-  backdrop-filter: blur(6px);
-  padding:40px 20px;
-  margin:30px auto;
-  max-width:900px;
+  padding:30px;
+  margin:20px auto;
+  max-width:800px;
   border-radius:16px;
-  color: #ffffff;
   text-align:center;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
-.about-section h2 { font-size:2em; margin-bottom:20px; color:#f0f9ff; }
-.about-section p { font-size:1.1em; line-height:1.6; }
 
-/* Kelime Kartları */
+/* Kelime ve Cümle Kartları */
 .word-card {
-  padding:12px 18px;
-  margin:10px 5px;
-  border-radius:14px;
+  padding:10px 15px;
+  margin:8px 5px;
+  border-radius:12px;
   color:white;
   cursor:pointer;
   font-weight:500;
-  transition:0.2s;
   display:inline-block;
+  transition:0.2s;
 }
 .word-card:hover { transform: scale(1.05); }
 .word-card.der { background:#0ea5e9; }
@@ -132,19 +97,18 @@ header .flag {
 /* Kaynaklar */
 .source-card a {
   display:block;
-  padding:12px 18px;
-  margin:8px 0;
-  border-radius:14px;
+  padding:10px 15px;
+  margin:5px 0;
+  border-radius:12px;
   background:#0ea5e9;
   color:white;
   text-decoration:none;
   font-weight:500;
   transition:0.2s;
 }
-.source-card a:hover { transform: scale(1.05); background:#0284c7; }
+.source-card a:hover { background:#0284c7; }
 
 /* Responsive */
 @media screen and (max-width:768px){
-  .buttons button { display:block; margin:10px auto; }
   .word-card { display:block; margin:8px auto; }
-  }
+}
