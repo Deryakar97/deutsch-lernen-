@@ -3,177 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Almanca Öğreniyorum</title>
+  <title>Derya’s Deutsch</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-
-    body {
-      background: linear-gradient(135deg, #0f172a, #020617);
-      color: white;
-      overflow-x: hidden;
-    }
-
-    .content {
-      padding: 120px 40px;
-      max-width: 520px;
-      position: relative;
-      z-index: 2;
-    }
-
-    .card {
-      background: rgba(59, 130, 246, 0.08);
-      border: 1px solid rgba(59, 130, 246, 0.25);
-      border-radius: 18px;
-      padding: 24px;
-      margin-bottom: 18px;
-      transition: 0.25s;
-      backdrop-filter: blur(10px);
-    }
-
-    .card:hover {
-      transform: translateY(-2px);
-      border-color: rgba(96, 165, 250, 0.6);
-    }
-
-    .card-title {
-      font-size: 12px;
-      color: #93c5fd;
-      margin-bottom: 12px;
-      letter-spacing: 0.6px;
-      text-transform: uppercase;
-    }
-
-    .goal {
-      font-size: 20px;
-      font-weight: 500;
-    }
-
-    .actions {
-      display: flex;
-      gap: 12px;
-    }
-
-    button {
-      flex: 1;
-      background: linear-gradient(135deg, #3b82f6, #2563eb);
-      color: white;
-      border: none;
-      padding: 11px;
-      border-radius: 12px;
-      cursor: pointer;
-      transition: 0.2s;
-      font-size: 14px;
-      font-weight: 500;
-    }
-
-    button:hover {
-      transform: scale(1.03);
-      background: linear-gradient(135deg, #60a5fa, #3b82f6);
-    }
-
-    .last-item {
-      font-size: 16px;
-      color: #dbeafe;
-    }
-
-    /* Kabarcıklar */
-
-    .bubbles {
-      position: fixed;
-      inset: 0;
-      overflow: hidden;
-      pointer-events: none;
-      z-index: 1;
-    }
-
-    .bubbles span {
-      position: absolute;
-      bottom: -60px;
-      border-radius: 50%;
-      background: rgba(96, 165, 250, 0.35);
-      animation: rise infinite ease-in;
-    }
-
-    .bubbles span:nth-child(1) {
-      left: 8%;
-      width: 10px;
-      height: 10px;
-      animation-duration: 9s;
-    }
-
-    .bubbles span:nth-child(2) {
-      left: 18%;
-      width: 16px;
-      height: 16px;
-      animation-duration: 14s;
-    }
-
-    .bubbles span:nth-child(3) {
-      left: 33%;
-      width: 7px;
-      height: 7px;
-      animation-duration: 11s;
-    }
-
-    .bubbles span:nth-child(4) {
-      left: 48%;
-      width: 22px;
-      height: 22px;
-      animation-duration: 17s;
-    }
-
-    .bubbles span:nth-child(5) {
-      left: 63%;
-      width: 13px;
-      height: 13px;
-      animation-duration: 12s;
-    }
-
-    .bubbles span:nth-child(6) {
-      left: 76%;
-      width: 9px;
-      height: 9px;
-      animation-duration: 10s;
-    }
-
-    .bubbles span:nth-child(7) {
-      left: 88%;
-      width: 19px;
-      height: 19px;
-      animation-duration: 15s;
-    }
-
-    @keyframes rise {
-      from {
-        transform: translateY(0);
-        opacity: 0;
-      }
-      10% {
-        opacity: 1;
-      }
-      to {
-        transform: translateY(-120vh);
-        opacity: 0;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <!-- Marka -->
+  <div class="brand">
+    <div>Derya’s Deutsch</div>
+    <small>Her gün biraz daha Almanca</small>
+    <span class="flag"></span>
+  </div>
+
+  <!-- Kabarcıklar -->
   <div class="bubbles">
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
+    <span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span>
   </div>
 
   <main class="content">
@@ -203,4 +49,4 @@
   </main>
 
 </body>
-  </html>
+</html>
