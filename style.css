@@ -3,14 +3,22 @@
 /* Arka plan – su altı */
 body {
   background: linear-gradient(to bottom,#a0f0ff 0%,#22c1ee 50%,#0d3a5e 100%);
-  background-attachment: fixed; color:white; overflow-x:hidden; min-height:100vh; position:relative;
+  background-attachment: fixed;
+  color:white;
+  overflow-x:hidden;
+  min-height:100vh;
+  position:relative;
 }
 
 /* Hafif ışık hareketi */
 body::before {
-  content:''; position:fixed; inset:0;
+  content:'';
+  position:fixed;
+  inset:0;
   background:radial-gradient(circle at 50% 30%, rgba(255,255,255,0.08), transparent 70%);
-  animation: lightMove 8s ease-in-out infinite; pointer-events:none; z-index:0;
+  animation: lightMove 8s ease-in-out infinite;
+  pointer-events:none;
+  z-index:0;
 }
 @keyframes lightMove {
   0%{transform:translate(0,0) rotate(0deg);}
@@ -20,15 +28,30 @@ body::before {
   100%{transform:translate(0,0) rotate(0deg);}
 }
 
-/* Marka – sade + bayrak animasyon */
+/* Marka */
 .brand {
-  position:fixed; top:20px; left:24px; font-size:14px; letter-spacing:0.4px;
-  background:none; padding:0; z-index:3;
+  position:fixed;
+  top:20px;
+  left:24px;
+  z-index:3;
 }
-.brand small { display:block; font-size:11px; opacity:0.8; margin-top:3px; }
+.brand .title {
+  font-size:32px;
+  font-weight:700;
+  color:#ffffff;
+  text-shadow:0 0 6px #a0f0ff, 0 0 12px #22c1ee, 0 0 18px #0d3a5e;
+}
+.brand .subtitle {
+  font-size:14px;
+  color:#e0f7ff;
+  margin-top:4px;
+}
+
+/* Dalgalanan bayrak */
 .flag {
   display:inline-block;
-  width:24px; height:16px;
+  width:24px;
+  height:16px;
   border-radius:4px;
   background:linear-gradient(to bottom, black 33%, red 33% 66%, gold 66%);
   animation:wave 1.5s ease-in-out infinite alternate;
@@ -43,9 +66,15 @@ body::before {
 /* İçerik */
 .content { padding:120px 40px; max-width:520px; position:relative; z-index:2; }
 .card {
-  background:rgba(255,255,255,0.85); border:1px solid rgba(255,255,255,0.9);
-  border-radius:20px; padding:24px; margin-bottom:18px; transition:0.25s; backdrop-filter:blur(10px);
-  color:#020617; box-shadow:0 10px 30px rgba(0,0,0,0.12);
+  background:rgba(255,255,255,0.85);
+  border:1px solid rgba(255,255,255,0.9);
+  border-radius:20px;
+  padding:24px;
+  margin-bottom:18px;
+  transition:0.25s;
+  backdrop-filter:blur(10px);
+  color:#020617;
+  box-shadow:0 10px 30px rgba(0,0,0,0.12);
 }
 .card:hover{transform:translateY(-3px);}
 .card-title{font-size:12px;color:#0284c7;margin-bottom:12px;letter-spacing:0.6px;text-transform:uppercase;}
@@ -53,16 +82,27 @@ body::before {
 .last-item{font-size:16px;}
 .actions{display:flex;gap:12px;}
 button{
-  flex:1; background:linear-gradient(135deg,#0ea5e9,#0369a1); color:white;
-  border:none; padding:11px; border-radius:14px; cursor:pointer; transition:0.2s;
-  font-size:14px; font-weight:500; box-shadow:0 6px 14px rgba(0,0,0,0.18);
+  flex:1;
+  background:linear-gradient(135deg,#0ea5e9,#0369a1);
+  color:white;
+  border:none;
+  padding:11px;
+  border-radius:14px;
+  cursor:pointer;
+  transition:0.2s;
+  font-size:14px;
+  font-weight:500;
+  box-shadow:0 6px 14px rgba(0,0,0,0.18);
 }
 button:hover{transform:scale(1.04);}
 
 /* Kabarcıklar */
 .bubbles{position:fixed; inset:0; overflow:hidden; pointer-events:none; z-index:1;}
 .bubbles span{
-  position:absolute; bottom:-80px; border-radius:50%; animation:rise infinite ease-in;
+  position:absolute;
+  bottom:-80px;
+  border-radius:50%;
+  animation:rise infinite ease-in;
   background:radial-gradient(circle at 30% 30%,rgba(255,255,255,0.95),rgba(255,255,255,0.45) 25%,rgba(255,255,255,0.12) 60%,rgba(255,255,255,0.05));
   backdrop-filter:blur(4px);
   box-shadow: inset -10px -10px 20px rgba(255,255,255,0.35), inset 8px 8px 16px rgba(255,255,255,0.18), 0 14px 32px rgba(0,0,0,0.2);
