@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background: #0f0f10;
+  color: #f5f5f5;
+}
+
+.content {
+  padding: 100px 40px;
+  max-width: 520px;
+}
+
+.card {
+  background: #151517;
+  border: 1px solid #222226;
+  border-radius: 14px;
+  padding: 22px;
+  margin-bottom: 18px;
+  transition: 0.2s;
+}
+
+.card:hover {
+  border-color: #2d2d32;
+}
+
+.card-title {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+
+.goal {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  flex: 1;
+  background: #1d1d21;
+  color: white;
+  border: 1px solid #2a2a30;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #2a2a31;
+}
+
+.last-item {
+  font-size: 16px;
+  }
